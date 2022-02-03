@@ -6,4 +6,4 @@ init_db()
 
 app = FastAPI()
 
-app.include_router(item.router, prefix="/items", tags=["Items"])
+app.include_router(bug.router, prefix="/bugs", tags=["Bug"])

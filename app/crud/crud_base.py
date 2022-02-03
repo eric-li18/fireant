@@ -1,4 +1,4 @@
-from backend.db.base import Base
+from app.db.base import Base
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from fastapi.encoders import jsonable_encoder

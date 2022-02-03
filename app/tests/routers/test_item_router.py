@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from backend.tests.utils import utils
+from app.tests.utils import utils
 
 
 def test_create_item(client: TestClient):
