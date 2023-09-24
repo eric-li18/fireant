@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   database:
-    container_name: postgres
+    container_name: postgres-fireant
     image: postgres:13
     env_file:
       - .env
@@ -10,6 +10,14 @@ services:
       - 5432:5432
     volumes:
       - database:/var/lib/postgresql/data
+  backend:
+    container_name: app-fireant
+    ports:
+      - 8000:8000
+    build:
+      context: ./app
+    depends_on: 
+      - database
 
 volumes:
   database:
